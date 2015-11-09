@@ -1,0 +1,8 @@
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos_Script.PreDeployment.sql
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos_Script.PostDeployment.sql
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos_Database.sqlsettings
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos_Database.sqldeployment
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos_Database.sqlcmdvars
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos.deploymanifest
+E:\NoBack\MvcApplication1\BaseDatos\sql\debug\BaseDatos.dbschema
+E:\NoBack\MvcApplication1\BaseDatos\obj\Debug\BaseDatos.dbschema
