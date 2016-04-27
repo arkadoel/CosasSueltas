@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <title></title>
+</head>
+
+<body ng-app="" ng-init="countries = [   {locale:'en-US',name:'United States'},
+                                            {locale:'en-GB',name:'United Kingdom'},
+                                            {locale:'en-FR',name:'France'}];
+                            pruebas = ['prueba01', 'prueba02' ];
+                            ">
+    <!-- LOS DATOS DE NG-INIT SIEMPRE ENTRE [] NUNCA ENTRE {} -->
+    <div>
+        <h1>Representar lista paises:</h1>
+        <ol>
+            <li ng-repeat="pais in countries">
+                Nombre del pais: <span style="font-weight:bold">{{pais.name}}</span>
+                Locale: <span style="font-weight:bold">{{pais.locale}}</span>
+                <!-- Otra forma de poner lo anterior es la siguiente -->
+                <br /> <span ng-bind="pais.name"></span>
+            </li>
+        </ol>
+        <hr />
+        <h2>Listar pruebas</h2>
+        <div>
+            <ul>
+                <li ng-repeat="prueba in pruebas">
+                    <span ng-bind="prueba"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../Scripts/angular.js"></script>
+</body>
+</html>

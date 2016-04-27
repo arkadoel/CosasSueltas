@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app="store">
+
+    <div ng-controller="StoreController as store">
+        <h1>{{ store.product.name }} </h1>
+        <h2> ${{store.product.price }}</h2>
+        <p> {{store.product.description }} </p>
+
+        <!--ng-show lo muestra cuando la propiedad es true
+            ng-hide lo oculta cuando la propiedad es true-->
+        <button ng-show="store.product.canPurchase">Add to cart</button>
+    </div>
+
+
+    <script type="text/javascript" src="../Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="js/app05.js"></script>
+</body>
+</html>
