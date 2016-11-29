@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <br/>
+    <button class="btn btn-primary" type="button" onclick="loadRecords()">Cargar</button>
+</div>
+    <div class="row">
+
+        <table data-toggle="table"
+               data-classes="table table-hover table-condensed"
+               data-striped="true"
+               data-sort-name="id_caso"
+               data-sort-order="desc"
+               data-pagination="true">
+            <thead>
+                <tr>
+                    <th class="col-xs-1" data-field="id_caso" data-sortable="true">Nº caso</th>
+                    <th class="col-xs-1" data-field="Nombre" data-sortable="true">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </div>
+<script type="text/javascript">
+    function loadRecords() {
+        $.ajax({
+            type: "POST",
+            url: '<%=Url.Action("getPersonas", "Home") %>',
+            data: ({
+
+            }),
+            async: true,
+            dataType: "json",
+            headers: {
+                "Accept": "application/json"
+            },
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+
+        });
+    }
+</script>

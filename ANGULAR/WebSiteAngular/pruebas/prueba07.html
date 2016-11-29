@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="gemStore">
 <head>
     <title></title>
 </head>
-<body >
+<body ng-controller="StoreController as store">
     <br/>
-
+    <div ng-repeat="product in store.products">
+      {{product.name}}
+    </div>
 
     <script type="text/javascript" src="../Scripts/angular.min.js"></script>
     <script type="text/javascript" src="js/app07.js"></script>

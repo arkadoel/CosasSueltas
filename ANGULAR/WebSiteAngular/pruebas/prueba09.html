@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- EL EJERCICIO CONSISTE EN VER LA PRIMERA IMAGEN para cada producto-->
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="js/app09.js"></script>
+  </head>
+  <body ng-controller="StoreController as store">
+    <!--  Products Container  -->
+    <div class="list-group">
+      <!--  Product Container  -->
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>
+          {{product.name}}
+          <em class="pull-right">{{product.price | currency}}</em>
+        </h3>
+        <!-- Image Gallery  -->
+        <div class="gallery" >
+          <img ng-src="{{product.images[0]}}"/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

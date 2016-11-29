@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <br />
+    <button class="btn btn-primary" type="button" onclick="loadRecords()">Cargar</button>
+</div>
+<div class="row">
+
+    <table id="miTabla" data-toggle="table"
+           data-classes="table table-hover table-condensed"
+           data-striped="true"
+           data-sort-name="ID"
+           data-sort-order="desc"
+           data-pagination="true">
+        <thead>
+            <tr>
+                <th class="col-xs-1" data-field="ID" data-sortable="true">Nº caso</th>
+                <th class="col-xs-1" data-field="NOMBRE" data-sortable="true">Nombre</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <br/>
+    <table id="miTabla2"  data-classes="table table-hover table-condensed"></table>
+</div>
+<script type="text/javascript">
+    function loadRecords() {
+        var filas = "";
+        $.ajax({
+            type: "GET",
+            url: '/API/Personas',
+            async: true,
+            dataType: "json",
+            headers: {
+                "Accept": "application/json"
+            },
+            success: function (data) {
+                console.log(data);
+                $.each(data, function (key, item) {
+                   // console.log(item);
+                    filas += '<tr>';
+                    filas += '<td>' + item.ID + '</td>';
+                    filas += '<td>' + item.NOMBRE + '</td>';
+                    filas += '</tr>';
+                });
+                /*$('#miTabla tbody').empty();
+                $('#miTabla tbody').append(filas);*/
+
+                $('#miTabla2').bootstrapTable({
+                    columns: [{
+                        field: 'ID',
+                        title: 'Nº caso'
+                    }, {
+                        field: 'NOMBRE',
+                        title: 'Nombre',
+                        sortable: true
+                    }, ],
+                    pagination: true,
+                    toggle: 'table',
+                    data: data
+                    
+                });
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+
+        });
+    }
+</script>
