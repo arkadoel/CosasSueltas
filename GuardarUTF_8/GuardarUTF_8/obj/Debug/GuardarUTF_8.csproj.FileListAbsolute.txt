@@ -1,0 +1,6 @@
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\bin\Debug\GuardarUTF_8.exe.config
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\obj\Debug\GuardarUTF_8.csprojResolveAssemblyReference.cache
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\bin\Debug\GuardarUTF_8.exe
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\bin\Debug\GuardarUTF_8.pdb
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\obj\Debug\GuardarUTF_8.exe
+D:\NoBack\CosasSueltas\GuardarUTF_8\GuardarUTF_8\obj\Debug\GuardarUTF_8.pdb
