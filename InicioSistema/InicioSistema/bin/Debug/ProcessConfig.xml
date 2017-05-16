@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Procesos>
+  <Proceso name="skype" Priority="Low" Number_Of_CPUS="1or2"/>
+  <Proceso name="chrome" Priority="Below" Number_Of_CPUS="1to3"/>
+  <Proceso name="firefox" Priority="Below" Number_Of_CPUS="1to3"/>
+  <Proceso name="tsvncache" Priority="Below" Number_Of_CPUS="1or2"/>
+  <Proceso name="jusched" Priority="Low" Number_Of_CPUS="3"/>
+  <Proceso name="tortoise" Priority="Below" Number_Of_CPUS="1or2"/>
+</Procesos>
