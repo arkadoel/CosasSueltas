@@ -1,0 +1,4 @@
+fsutil behavior set memoryusage 2
+
+
+para volveer a lo normal poner 1
