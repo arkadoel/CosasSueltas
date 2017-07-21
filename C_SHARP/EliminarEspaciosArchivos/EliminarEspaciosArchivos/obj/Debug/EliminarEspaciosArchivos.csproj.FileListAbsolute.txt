@@ -1,0 +1,15 @@
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\bin\Debug\EliminarEspaciosArchivos.exe.config
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\bin\Debug\EliminarEspaciosArchivos.exe
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\bin\Debug\EliminarEspaciosArchivos.pdb
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\MainWindow.baml
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\MainWindow.g.cs
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\App.g.cs
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos_MarkupCompile.cache
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.g.resources
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.Properties.Resources.resources
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.csproj.GenerateResource.Cache
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.exe
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.pdb
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\obj\Debug\EliminarEspaciosArchivos.csprojResolveAssemblyReference.cache
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\bin\Debug\Resources\Wirter.ico
+D:\NoBack\CosasSueltas\C_SHARP\EliminarEspaciosArchivos\EliminarEspaciosArchivos\bin\Debug\Resources\write-feather-icon.png
