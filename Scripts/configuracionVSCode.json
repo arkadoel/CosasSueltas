@@ -1,13 +1,28 @@
 // Coloque su configuración en este archivo para sobrescribir la configuración predeterminada.
 {
+    "editor.minimap.maxColumn": 30,
     "editor.mouseWheelZoom": true,
+    "editor.fontSize": 14,
+    "markdown.preview.fontSize": 11,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
     "csharp.suppressDotnetInstallWarning": true,
     "editor.wordWrap": "off",
-    "workbench.welcome.enabled": false,
-    "workbench.colorTheme": "Quiet Light",
     "window.zoomLevel": 0,
     "files.encoding": "utf8",
-    "editor.minimap.maxColumn": 70,
+    "files.autoGuessEncoding": false,
     "editor.renderIndentGuides" : false,
-    "extensions.autoUpdate": true
+    "extensions.autoUpdate": true,
+    "mssql.connections": [
+        {
+            "server": ".\\SQLExpress",
+            "database": "pepito",
+            "authenticationType": "SqlLogin",
+            "user": "mio",
+            "password": "toor",
+            "emptyPasswordInput": false,
+            "savePassword": true,
+            "profileName": "miLocal"
+        }
+    ],
+    "workbench.colorTheme": "Quiet Light"
 }
