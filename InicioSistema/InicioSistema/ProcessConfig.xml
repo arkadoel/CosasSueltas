@@ -3,5 +3,11 @@
   <Proceso name="skype" Priority="Low" Number_Of_CPUS="1or2"/>
   <Proceso name="chrome" Priority="Below" Number_Of_CPUS="1to3"/>
   <Proceso name="firefox" Priority="Below" Number_Of_CPUS="1to3"/>
-  <Proceso name="OUTLOOK" Priority="Low" Number_Of_CPUS="1"/>
+  <Proceso name="tsvncache" Priority="Below" Number_Of_CPUS="1or2"/>
+  <Proceso name="jusched" Priority="Low" Number_Of_CPUS="3"/>
+  <Proceso name="tortoise" Priority="Below" Number_Of_CPUS="1or2"/>
+  <Proceso name="ccSvcHst" Priority="Below" Number_Of_CPUS ="1" />
+  <Proceso name="TGitCache" Priority="Below" Number_Of_CPUS ="3" />
+  <Proceso name="TSVNCache" Priority="Below" Number_Of_CPUS ="3" />
+  
 </Procesos>

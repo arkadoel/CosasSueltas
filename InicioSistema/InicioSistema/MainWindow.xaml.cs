@@ -64,6 +64,15 @@ namespace InicioSistema
             public const long a_0x000F = 0x000F;
         }
 
+        public class Priority
+        {
+            public const string High = "HIGH";
+            public const string AboveNormal = "ABOVE";
+            public const string Normal = "NORMAL";
+            public const string BelowNormal = "BELOW";
+            public const string Low = "LOW";
+        }
+
         #endregion
 
         public MainWindow()
@@ -77,28 +86,34 @@ namespace InicioSistema
         {
             foreach (Programa programa in programas)
             {
-                List<Process> proc = Process.GetProcesses().Where(x => x.ProcessName.ToLower().Contains(programa.Name)).ToList();
+                List<Process> proc = Process.GetProcesses().Where(x => x.ProcessName.ToLower().Contains(programa.Name.ToLower())).ToList();
 
                 if (proc.Count > 0)
                 {
                     foreach (var proceso in proc)
                     {
-                        if (programa.Priority == "High") proceso.PriorityClass = ProcessPriorityClass.High;
-                        else if (programa.Priority == "Above") proceso.PriorityClass = ProcessPriorityClass.AboveNormal;
-                        else if (programa.Priority == "Normal") proceso.PriorityClass = ProcessPriorityClass.Normal;
-                        else if (programa.Priority == "Below") proceso.PriorityClass = ProcessPriorityClass.BelowNormal;
-                        else if (programa.Priority == "Low") proceso.PriorityClass = ProcessPriorityClass.Idle;
-                        else proceso.PriorityClass = ProcessPriorityClass.Normal;
+                        try
+                        {
+                            if (programa.Priority == Priority.High) proceso.PriorityClass = ProcessPriorityClass.High;
+                            else if (programa.Priority == Priority.AboveNormal) proceso.PriorityClass = ProcessPriorityClass.AboveNormal;
+                            else if (programa.Priority == Priority.Normal) proceso.PriorityClass = ProcessPriorityClass.Normal;
+                            else if (programa.Priority == Priority.BelowNormal) proceso.PriorityClass = ProcessPriorityClass.BelowNormal;
+                            else if (programa.Priority == Priority.Low) proceso.PriorityClass = ProcessPriorityClass.Idle;
+                            else proceso.PriorityClass = ProcessPriorityClass.Normal;
 
-                        if(programa.Number_Of_CPUS == "1") proceso.ProcessorAffinity = (IntPtr) CPU_Affinity.a_0x0001;
-                        else if (programa.Number_Of_CPUS == "2") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0002;
-                        else if (programa.Number_Of_CPUS == "3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0004;
-                        else if (programa.Number_Of_CPUS == "1or2") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0003;
-                        else if (programa.Number_Of_CPUS == "1or3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0005;
-                        else if (programa.Number_Of_CPUS == "1to3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0007;
-                        else if (programa.Number_Of_CPUS == "all") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x000F;
-                        else  proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x000F;
-
+                            if (programa.Number_Of_CPUS == "1") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0001;
+                            else if (programa.Number_Of_CPUS == "2") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0002;
+                            else if (programa.Number_Of_CPUS == "3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0004;
+                            else if (programa.Number_Of_CPUS == "1or2") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0003;
+                            else if (programa.Number_Of_CPUS == "1or3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0005;
+                            else if (programa.Number_Of_CPUS == "1to3") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0007;
+                            else if (programa.Number_Of_CPUS == "all") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x000F;
+                            else proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x000F;
+                        }
+                        catch (Exception ex)
+                        {
+                            System.Diagnostics.Debug.Print(ex.Message);
+                        }
 
                     }
 
@@ -116,7 +131,7 @@ namespace InicioSistema
                 programas.Add(new Programa()
                 {
                     Name = elProcess.Attributes().Where(x => x.Name.LocalName.ToLower() == "name").First().Value,
-                    Priority = elProcess.Attributes().Where(x => x.Name.LocalName.ToLower() == "priority").First().Value,
+                    Priority = elProcess.Attributes().Where(x => x.Name.LocalName.ToLower() == "priority").First().Value.ToUpper(),
                     Number_Of_CPUS = elProcess.Attributes().Where(x => x.Name.LocalName.ToLower() == "number_of_cpus").First().Value
                 });
             }
