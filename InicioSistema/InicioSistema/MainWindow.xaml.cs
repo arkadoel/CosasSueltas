@@ -71,6 +71,7 @@ namespace InicioSistema
             public const string Normal = "NORMAL";
             public const string BelowNormal = "BELOW";
             public const string Low = "LOW";
+            public const string Kill = "KILL";
         }
 
         #endregion
@@ -94,11 +95,14 @@ namespace InicioSistema
                     {
                         try
                         {
+                            programa.Priority = programa.Priority.ToUpper();
+
                             if (programa.Priority == Priority.High) proceso.PriorityClass = ProcessPriorityClass.High;
                             else if (programa.Priority == Priority.AboveNormal) proceso.PriorityClass = ProcessPriorityClass.AboveNormal;
                             else if (programa.Priority == Priority.Normal) proceso.PriorityClass = ProcessPriorityClass.Normal;
                             else if (programa.Priority == Priority.BelowNormal) proceso.PriorityClass = ProcessPriorityClass.BelowNormal;
                             else if (programa.Priority == Priority.Low) proceso.PriorityClass = ProcessPriorityClass.Idle;
+                            else if (programa.Priority == Priority.Kill) proceso.Kill();
                             else proceso.PriorityClass = ProcessPriorityClass.Normal;
 
                             if (programa.Number_Of_CPUS == "1") proceso.ProcessorAffinity = (IntPtr)CPU_Affinity.a_0x0001;
